@@ -13,8 +13,8 @@ app.use(express.json()); // Allow reading JSON data from requests
 
 // Routes — these handle different URLs
 app.use('/api/auth', require('./routes/auth'));         // Login/Register routes
+app.use('/api/expenses', require('./routes/expenses')); // Expense routes
 app.use('/api/budget', require('./routes/budget')); // Budget routes
-
 // Test route — visit http://localhost:5000 to check if server is running
 app.get('/', (req, res) => {
     res.json({ message: 'Expense Tracker API is running!' });
